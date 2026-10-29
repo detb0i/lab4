@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторна робота №7 — DOM та події</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Лабораторна робота №7</h1>
+    <p>Робота з Document Object Model. Обробка подій.</p>
+  </header>
+
+  <main>
+    <section id="task1" class="task">
+      <h2>1. Конвертер температури</h2>
+      <div class="row">Температура за Фаренгейтом <input type="text" id="tF" oninput="fahrenheitChanged()"></div>
+      <div class="row">Температура за Цельсієм <input type="text" id="tC" oninput="celsiusChanged()"></div>
+    </section>
+
+    <section id="task2" class="task">
+      <h2>2. Таблиця множення (текстове поле)</h2>
+      <div id="score2"></div>
+      <div class="row"><button id="next2" onclick="newTask2()">наступне завдання</button></div>
+      <div class="row">
+        <span id="task2text"></span>
+        <input type="text" id="ans2" onkeydown="if (event.key === 'Enter') checkTask2()">
+        <button id="chk2" onclick="checkTask2()">перевірити</button>
+      </div>
+      <div id="res2"></div>
+    </section>
+
+    <section id="task3" class="task">
+      <h2>3. Таблиця множення (радіокнопки)</h2>
+      <div id="score3"></div>
+      <div class="row"><button onclick="newTask3()">наступне завдання</button></div>
+      <div id="task3text"></div>
+      <div id="opts"></div>
+      <div id="res3"></div>
+    </section>
+
+    <section id="task4" class="task">
+      <h2>4. Ротатор зображень</h2>
+      <div id="rotator"></div>
+    </section>
+
+    <section id="task5" class="task">
+      <h2>5. Captcha</h2>
+      <div id="captcha"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

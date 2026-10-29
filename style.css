@@ -1,0 +1,112 @@
+:root {
+  --bg: #141922; 
+  --card: #202432;   
+  --bd: #2f3547;     
+  --fg: #f2f4fa;     
+  --muted: #9aa4b8;   
+  --ac: #6b8cff;      
+  --ac-text: #151925; 
+  --ok: #4ade80;
+  --err: #f87171;
+  --px: #ff3b4e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+header, main {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header { padding-top: 28px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 8px; }
+header p { margin: 0 0 8px; color: var(--muted); }
+
+.task {
+  margin: 20px 0 32px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+}
+
+h2 { font-size: 1.1rem; margin: 0 0 14px; }
+
+.row { margin: 12px 0; }
+.ok { color: var(--ok); }
+.err { color: var(--err); }
+
+input[type=text] {
+  width: 9em;
+  padding: 8px 10px;
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+}
+input[type=text]:focus { outline: 2px solid var(--ac); outline-offset: 0; }
+
+button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--ac);
+  color: var(--ac-text);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.08); }
+button:disabled { opacity: .5; cursor: default; filter: none; }
+
+#opts label { display: block; margin: 4px 0; }
+input[type=radio] { accent-color: var(--ac); }
+
+.rot {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.rot-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ac);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.rot-mid { min-width: 0; padding: 10px; text-align: center; }
+.rot-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 8px 0;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--card);
+}
+.rot-title { font-weight: 700; }
+
+.cap-pix {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 2px solid var(--bd);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.cap-d { display: grid; grid-template-columns: repeat(3, 8px); grid-auto-rows: 8px; }
+.cap-d span { display: block; }
+.cap-d span.on { background: var(--px); }
